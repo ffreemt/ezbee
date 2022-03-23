@@ -141,3 +141,5 @@ cython_debug/
 links/
 # .gitignore
 node_modules
+rsync-to-forindo.bat
+rsync-from-forindo.bat
