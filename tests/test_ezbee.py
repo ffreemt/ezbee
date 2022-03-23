@@ -6,7 +6,7 @@ from ezbee import ezbee
 
 def test_version():
     """Test version."""
-    assert __version__[:5] == "0.1.0"
+    assert __version__[:3] == "0.1"
 
 
 def test_sanity():
