@@ -12,6 +12,6 @@ def test_version():
 def test_sanity():
     """Sanity check."""
     try:
-        assert not ezbee()
+        assert not ezbee("", "")
     except Exception:
         assert True
