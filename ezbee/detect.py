@@ -3,12 +3,11 @@
 
 from typing import Any, Callable, List, Optional
 
-from polyglot.text import Detector
 import polyglot.detect.base
-from polyglot.detect.base import UnknownLanguage
 from fastlid import fastlid
-
 from logzero import logger
+from polyglot.detect.base import UnknownLanguage
+from polyglot.text import Detector
 
 polyglot.detect.base.logger.setLevel("ERROR")
 
@@ -50,7 +49,10 @@ def detect(text: str, set_languages: Optional[List[str]] = None) -> str:
         else:
             # def_lang = set_languages[-1]
             def_lang = set_languages[0]
-        logger.warning(" UnknownLanguage exception: probably snippet too short, setting to %s", def_lang)
+        logger.warning(
+            " UnknownLanguage exception: probably snippet too short, setting to %s",
+            def_lang,
+        )
         langs = [(def_lang, 0)]
     except Exception as exc:
         logger.error(exc)

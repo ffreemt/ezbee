@@ -7,12 +7,13 @@ from typing import Iterable, List, Optional, Tuple, Union  # noqa
 
 import numpy as np
 
-# from fastlid import fastlid
-from polyglot.text import Detector
-from logzero import logger
-
 # from radiobee.lists2cmat import lists2cmat  # use fast_scores
 # from radiobee.detect import detect
+from fast_scores.gen_cmat import gen_cmat  # pylint: disable=import-error
+from logzero import logger
+
+# from fastlid import fastlid
+from polyglot.text import Detector
 
 from ezbee.detect import detect
 
@@ -109,13 +110,13 @@ def text2lists(
     # find offset via diagonal(k),
     len1, len2 = len(list1), len(list2)
 
-    # len2, len1 = cmat.shape
-    # len_r, len_c = cmat.shape
     # ylim, xlim = cmat.shape
     ylim, xlim = len2, len1  # check
 
     # cmat dim: len1 x len2 or ylim x xlim
-    cmat = lists2cmat(list1, list2, lang1, lang2)
+    # cmat = lists2cmat(list1, list2, lang1, lang2)
+    # cmat.shape: len(list1)xlen(list2) or ylim x xlim
+    cmat = gen_cmat(list1, list2)
 
     # sq_mean_pair = [(elm, np.square(cmat.diagonal(elm)).mean()) for elm in range(2 - ylim, xlim + 1)]
     # df = pd.DataFrame(sq_mean_pair, columns=['offset', 'sq_mean'])
@@ -126,7 +127,9 @@ def text2lists(
     # locate max, -ylim + 2 ...xlim: range(1 - ylim, xlim)
     # sqare sum
 
-    sq_mean = [np.square(cmat.diagonal(elm)).mean() for elm in range(1 - ylim, xlim - 1)]
+    sq_mean = [
+        np.square(cmat.diagonal(elm)).mean() for elm in range(1 - ylim, xlim - 1)
+    ]
     # tot: xlim + ylim - 1
 
     # temp = [np.square(cmat.diagonal(elm)) for elm in range(2 - ylim, xlim + 1)]
@@ -152,4 +155,5 @@ def text2lists(
         # list1a = [""] * (-offset) + list1
         # list2a = list2[:]
 
-    return list1, list2
+    # return list1, list2
+    return [elm.strip() for elm in list1], [elm.strip() for elm in list2]

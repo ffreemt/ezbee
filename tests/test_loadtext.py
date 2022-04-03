@@ -2,6 +2,7 @@
 import pytest
 from ezbee.loadtext import loadtext
 
+
 @pytest.mark.xfail(reason="no file provided, trying to open ’.‘.")
 def test1():
     r"""Test default file."""
@@ -38,7 +39,6 @@ def test_utf_16le():
     if text:
         assert len(text) == 117871
 
-
     # text0 = '\ufeffFolding Beijing\t北京折叠\n"by Hao Jingfang, translated by Ken Liu"\t郝景芳\n# 1.\t# 1\n"At ten of five in the m'  # NOQA
     text0 = r'Folding Beijing\t北京折叠\n"by Hao Jingfang, translated by Ken Liu"\t郝景芳\n# 1.\t# 1\n"At ten of five in the mo'  # NOQA
     text2 = 'Folding Beijing\t\xe5\x8c\x97\xe4\xba\xac\xe6\x8a\x98\xe5\x8f\xa0\r\n"by Hao Jingfang, translated by Ken Liu"\t\xe9\x83\x9d\xe6\x99\xaf\xe8\x8a\xb3\r\n# 1.\t# 1\r\n"At ten of five in the mo'
@@ -46,4 +46,3 @@ def test_utf_16le():
     del text2
 
     # if text: assert text0 == text[:100]
-
