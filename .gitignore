@@ -143,3 +143,5 @@ links/
 node_modules
 rsync-to-forindo.bat
 rsync-from-forindo.bat
+heatmap12.html
+data/test-en-ali.xlsx
