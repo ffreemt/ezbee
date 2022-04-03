@@ -1,4 +1,4 @@
-name: pytest
+name: win-pytest
 
 on:
   push:
