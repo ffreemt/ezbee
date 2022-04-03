@@ -30,4 +30,4 @@ jobs:
           poetry run flake8 --exit-zero
           # poetry run pytest
       - name: Run pytest
-        run: poetry run pytest tests
+        run: poetry run pytest tests -k test_color_map -k test_sanity -k test_loadtext.py::test1 -k test_shakespeare1000

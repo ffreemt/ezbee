@@ -13,6 +13,6 @@ pip install git+https://github.com/ffreemt/ezbee
 
 ## Use it
 ```python
-from ezbee import ezbee
-
+ezbee --help
+# or python -m ezbee --help
 ```
