@@ -7,32 +7,16 @@ from typing import List, Optional
 # import environs
 import logzero
 import typer
-from icecream import ic
-from icecream import install as ic_install
+from icecream import ic, install as ic_install
 from logzero import logger
 
 from ezbee import __version__, ezbee, loglevel
-from ezbee.cmat2html import cmat2html
+
+# from ezbee.cmat2html import cmat2html
 from ezbee.loadtext import loadtext
 from ezbee.text2lists import text2lists
 from ezbee.gen_pairs import gen_pairs
 from ezbee.save_xlsx_tsv_csv import save_xlsx_tsv_csv
-
-_ = """
-# set env LOGLEVEL to 10/debug/DEBUG to turn on debug
-try:
-    _ = environs.Env().log_level("LOGLEVEL")
-# except environs.EnvValidationError:
-except (environs.EnvError, environs.EnvValidationError):
-    _ = None
-except Exception:
-    _ = None
-
-# logger.info(" loglevel: %s", _)
-
-# logzero.loglevel(_ or 10)
-_ = _ or 20
-# """
 
 # logzero.loglevel(_)
 logzero.loglevel(loglevel())
@@ -218,11 +202,24 @@ def main(
     # process show_plot
     logger.debug("show-plot: %s", show_plot)
     if show_plot:
-        cmat2html(
-            ezbee.cmat,
-            aset=ezbee.aset,
-            show_plot=show_plot,
-        )
+        try:
+            from ezbee.cmat2html import cmat2html  # pylint: disable=import-outside-toplevel
+            flag = False
+        except ModuleNotFoundError:
+            logger.warning(" You need to install extras [plot] in order to use this option, e.g. pip install ezbee[plot]==0.1.0a3, exiting...")
+
+            # raise typer.Exit(1) from exc
+            flag = True
+        except Exception as exc:
+            logger.exception(exc)
+            flag = True
+
+        if not flag:
+            cmat2html(
+                ezbee.cmat,
+                aset=ezbee.aset,
+                show_plot=show_plot,
+            )
 
     logger.debug("Proceed with saving files...")
 
