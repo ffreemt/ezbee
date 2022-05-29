@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "ezbee"
-version = "0.1.0-alpha.3"
+version = "0.1.1-alpha.0"
 description = "engnlish-chinese dualtext aligner"
 authors = ["ffreemt"]
 license = "MIT"

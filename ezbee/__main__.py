@@ -142,7 +142,7 @@ def main(
 
     for file_ in files:
         if not Path(file_).is_file():
-            typer.echo(f" [{file_}] is not a file or does not exit.")
+            typer.echo(f" [{file_}] is not a file or does not exist.")
             raise typer.Exit()
 
     # paired, two files and need_sep not set

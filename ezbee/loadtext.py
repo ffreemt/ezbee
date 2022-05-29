@@ -19,7 +19,7 @@ refer to load_paras.py
 
 import io
 from pathlib import Path
-from typing import Union  # noqa
+from typing import Union
 
 import cchardet
 

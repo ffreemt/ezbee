@@ -118,7 +118,7 @@ def cmat2html(
 
     arr = np.array(aset, dtype=object)
 
-    # convet "" in col3 to nan
+    # convert "" in col3 to nan
     arr[:, 2][arr[:, 2] == ""] = np.nan
     arr[arr == ""] = 0
     arr = arr.astype(float)
