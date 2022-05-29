@@ -7,7 +7,9 @@ ezbee to align en/zh texts
 Python 3.8 only
 
 ```shell
-pip install git+https://github.com/ffreemt/ezbee
+pip install ezbee
+# or poetry add ezbee
+# pip install git+https://github.com/ffreemt/ezbee
 # poetry add git+https://github.com/ffreemt/ezbee
 # git clone https://github.com/ffreemt/ezbee && cd ezbee
 ```
