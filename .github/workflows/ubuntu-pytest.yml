@@ -23,6 +23,7 @@ jobs:
       - name: Install packages
         run: |
           sudo apt-get install libicu-dev pkg-config
+          poetry run pip install fasttext
           poetry add pyicu==2.8 pycld2
           poetry install  # --no-dev
       - name: Run flake8
@@ -30,4 +31,5 @@ jobs:
           poetry run flake8 --exit-zero
           # poetry run pytest
       - name: Run pytest
-        run: poetry run pytest tests -k test_color_map -k test_sanity -k test_loadtext.py::test1 -k test_shakespeare1000
+        # run: poetry run pytest tests -k test_color_map -k test_sanity -k test_loadtext.py::test1 -k test_shakespeare1000
+        run: poetry run pytest tests

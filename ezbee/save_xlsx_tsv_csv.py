@@ -36,7 +36,7 @@ def save_xlsx_tsv_csv(
     columns = [str(elm) for elm in list(range(np.array(lst).shape[1]))]
 
     try:
-        df_lst = pd.DataFrame(np.array(lst), columns=columns, dtype="object")
+        df_lst = pd.DataFrame(np.array(lst), columns=columns, dtype=object)
     except Exception as exc:
         logger.error(exc)
         raise

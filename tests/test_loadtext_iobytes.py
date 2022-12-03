@@ -7,7 +7,7 @@ from ezbee.loadtext import loadtext
 
 def test_loadtext_iobytes():
     r"""Test iobytes"""
-    iob = io.BytesIO(Path(r"data\test-en.txt").read_bytes())
+    iob = io.BytesIO(Path(r"data/test-en.txt").read_bytes())
     text = loadtext(iob)
 
     if text:

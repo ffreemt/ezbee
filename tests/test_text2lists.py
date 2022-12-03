@@ -6,7 +6,7 @@ from ezbee.text2lists import text2lists
 
 def test_text2lists_dual1():
     """Test text2lists data\test-dual.txt."""
-    filename = r"data\test-dual.txt"
+    filename = r"data/test-dual.txt"
     text = loadtext(filename)  # noqa
     l1, l2 = text2lists(text)
     assert l2[0] in [""]

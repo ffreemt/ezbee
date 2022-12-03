@@ -17,7 +17,7 @@ def test1():
 
 def testgb():
     r"""Test shuangyu_ku\txt-books\19部世界名著中英文对照版TXT."""
-    file = r"tests\爱丽丝漫游奇境记.txt"
+    file = r"tests/爱丽丝漫游奇境记.txt"
     text = loadtext(file)
     if text:
         # assert len(text) == 190913
@@ -34,7 +34,7 @@ def test_utf_16le():
     # file = 'E:\\beta_final_version\\build\\test_files\\files_for_testing_import\\Folding_Beijing_12.txt'  # NOQA
     file = r"C:\dl\Dropbox\mat-dir\snippets-mat\pyqt\Sandbox\hp_beta-version_files\test_files\files_for_testing_import\Folding_Beijing_12.txt"  # NOQA
     file = r"C:\dl\Dropbox\mat-dir\pyqt\Sandbox\hp_beta-version_files\test_files\files_for_testing_import\Folding_Beijing_12.txt"
-    file = r"tests\Folding_Beijing_12.txt"
+    file = r"tests/Folding_Beijing_12.txt"
 
     text = loadtext(file)
     if text:
