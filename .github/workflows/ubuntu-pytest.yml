@@ -25,8 +25,8 @@ jobs:
         run: |
           # sudo apt-get install libicu-dev pkg-config
           poetry run pip install fasttext
-          poetry add pyicu==2.8 pycld2
           poetry install  # --no-dev
+          poetry add pyicu==2.8 pycld2
       - name: Run flake8
         run: |
           poetry run flake8 --exit-zero
