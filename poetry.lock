@@ -654,14 +654,6 @@ pastel = ">=0.2.0,<0.3.0"
 tomlkit = ">=0.6.0,<1.0.0"
 
 [[package]]
-name = "polyglot"
-version = "16.7.4"
-description = "Polyglot is a natural language pipeline that supports massive multilingual applications."
-category = "main"
-optional = false
-python-versions = "*"
-
-[[package]]
 name = "py"
 version = "1.11.0"
 description = "library with cross-python path, ini-parsing, io, code, log facilities"
@@ -1089,7 +1081,7 @@ plot = ["holoviews", "plotly", "seaborn"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8.3"
-content-hash = "6345f34c0b55207b8e7392a257afe981d31a3445ac076bfbd036fa5d0b34dafb"
+content-hash = "16f1803cc901ee6b031bbbae601bba2ded07a98b02ee10703e1241411c321ff3"
 
 [metadata.files]
 asttokens = [
@@ -1651,9 +1643,6 @@ pluggy = [
 poethepoet = [
     {file = "poethepoet-0.10.0-py3-none-any.whl", hash = "sha256:6fb3021603d4421c6fcc40072bbcf150a6c52ef70ff4d3be089b8b04e015ef5a"},
     {file = "poethepoet-0.10.0.tar.gz", hash = "sha256:70b97cb194b978dc464c70793e85e6f746cddf82b84a38bfb135946ad71ae19c"},
-]
-polyglot = [
-    {file = "polyglot-16.7.4.tar.gz", hash = "sha256:f7d9cca9a212622548e9416fb89f1238b994b8860ef49e03b7c82c67f9b6269b"},
 ]
 py = [
     {file = "py-1.11.0-py2.py3-none-any.whl", hash = "sha256:607c53218732647dff4acdfcd50cb62615cedf612e72d1724fb1a0cc6405b378"},

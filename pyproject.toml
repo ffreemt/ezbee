@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "ezbee"
-version = "0.1.2a0"
+version = "0.1.2a1"
 description = "english-chinese dualtext aligner"
 authors = ["ffreemt"]
 license = "MIT"
@@ -18,7 +18,7 @@ cchardet = "^2.1.7"
 cmat2aset = "0.1.0a7"
 fast-scores = "0.1.3a3"
 XlsxWriter = "^3.0.3"
-polyglot = "^16.7.4"
+# polyglot = "^16.7.4"
 Morfessor = "^2.0.6"
 Jinja2 = "^3.1.1"
 holoviews = { version = "^1.14.8", optional = true }
