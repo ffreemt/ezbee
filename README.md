@@ -8,10 +8,18 @@ Python 3.8 only
 
 ```shell
 pip install ezbee
-# or poetry add ezbee
+# or poetry add ezbee --alow-prerealeases
 # pip install git+https://github.com/ffreemt/ezbee
 # poetry add git+https://github.com/ffreemt/ezbee
 # git clone https://github.com/ffreemt/ezbee && cd ezbee
+```
+
+## Post- or Pre-install 
+e.g.
+```bash
+cd data\artifects
+pip install fasttext-0.9.2-cp38-cp38-win_amd64.whl pycld2-0.41-cp38-cp38-win_amd64.whl PyICU-2.8.1-cp38-cp38-win_amd64.whl
+pip install polyglot-16.7.4.tar.gz
 ```
 
 ## Use it

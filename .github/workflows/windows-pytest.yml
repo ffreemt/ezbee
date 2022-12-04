@@ -37,5 +37,5 @@ jobs:
       #   run: |
       #     poetry run flake8 --exit-zero
       #     # poetry run pytest
-      # - name: Run pytest
-      #   run: poetry run pytest tests
+      - name: Run pytest
+        run: poetry run pytest tests
