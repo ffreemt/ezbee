@@ -32,7 +32,7 @@ jobs:
           # poetry install  # --no-dev
           poetry run pip install -r requirements-dev-win.txt
           # poetry run pip install -U git+https://github.com/aboSamoor/polyglot.git@master
-          git clone https://github.com/aboSamoor/polyglot.git && cd polyglot && poetry run python setup.py install && cd ..
+          # git clone https://github.com/aboSamoor/polyglot.git && cd polyglot && poetry run python setup.py install && cd ..
       # - name: Run flake8
       #   run: |
       #     poetry run flake8 --exit-zero
