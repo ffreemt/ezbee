@@ -17,7 +17,12 @@ pip install ezbee
 ## Post- or Pre-install
 ```
 pip install fastext
+pip install pyicu==2.8 pycld2
 pip install https://github.com/ffreemt/ezbee/raw/main/data/artifects/polyglot-16.7.4.tar.gz
+```
+In linux/macos, you may need to run (if the required packages are not already present in the system) something similar to
+```
+apt install libicu-dev pkg-config
 ```
 
 ### For Windows without C++
