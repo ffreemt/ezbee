@@ -14,7 +14,13 @@ pip install ezbee
 # git clone https://github.com/ffreemt/ezbee && cd ezbee
 ```
 
-## Post- or Pre-install 
+## Post- or Pre-install
+```
+pip install fastext
+pip install https://github.com/ffreemt/ezbee/raw/main/data/artifects/polyglot-16.7.4.tar.gz
+```
+
+### For Windows without C++
 e.g.
 ```bash
 cd data\artifects
