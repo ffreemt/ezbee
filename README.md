@@ -21,11 +21,11 @@ pip install https://github.com/ffreemt/ezbee/raw/main/data/artifects/polyglot-16
 ```
 
 ### For Windows without C++
-e.g.
+e.g. for Python 3.8
 ```bash
 cd data\artifects
 pip install fasttext-0.9.2-cp38-cp38-win_amd64.whl pycld2-0.41-cp38-cp38-win_amd64.whl PyICU-2.8.1-cp38-cp38-win_amd64.whl
-pip install polyglot-16.7.4.tar.gz
+pip install https://github.com/ffreemt/ezbee/raw/main/data/artifects/polyglot-16.7.4.tar.gz
 ```
 
 ## Use it
