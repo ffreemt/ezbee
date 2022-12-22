@@ -22,7 +22,10 @@ pip install https://github.com/ffreemt/ezbee/raw/main/data/artifects/polyglot-16
 ```
 In linux/macos, you may need to run (if the required packages are not already present in the system) something similar to
 ```
-apt install libicu-dev pkg-config
+apt install libicu-dev
+
+# or for macos
+brew install pkg-config icu4c
 ```
 
 ### For Windows without C++
