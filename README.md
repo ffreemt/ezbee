@@ -25,8 +25,14 @@ In linux/macos, you may need to run (if the required packages are not already pr
 apt install libicu-dev
 
 # or for macos
-brew install pkg-config icu4c
+brew install icu4c
+brew link icu4c --force
+export PKG_CONFIG_PATH="/usr/local/opt/icu4c/lib/pkgconfig"
+export LDFLAGS="-L/usr/local/opt/icu4c/lib"
+export CPPFLAGS="-I/usr/local/opt/icu4c/include"
 ```
+
+Refer to the pre-install part in workflow file: `routine-tests.yml`
 
 ### For Windows without C++
 e.g. for Python 3.8
