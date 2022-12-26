@@ -206,7 +206,7 @@ def main(
             from ezbee.cmat2html import cmat2html  # pylint: disable=import-outside-toplevel
             flag = False
         except ModuleNotFoundError:
-            logger.warning(" You need to install extras [plot] in order to use this option, e.g. pip install ezbee[plot]==0.1.0a3, exiting...")
+            logger.warning(" You need to install extras [plot] in order to use this option, e.g. pip install seaborn plotly holoviews, exiting...")
 
             # raise typer.Exit(1) from exc
             flag = True
