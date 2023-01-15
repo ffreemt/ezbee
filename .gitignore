@@ -148,3 +148,4 @@ data/test-en-ali.xlsx
 okteto-up.bat
 data/*.tsv
 data/*.xlsx
+*sync-conflict*
