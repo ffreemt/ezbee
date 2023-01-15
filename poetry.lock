@@ -253,7 +253,7 @@ woff = ["brotli (>=1.0.1)", "brotlicffi (>=0.8.0)", "zopfli (>=0.1.4)"]
 
 [[package]]
 name = "gen-trace"
-version = "0.1.0a2"
+version = "0.1.0"
 description = "Generate interpolate1d (trace) for a cmat"
 category = "main"
 optional = false
@@ -1091,7 +1091,7 @@ plot = ["holoviews", "plotly", "seaborn"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8.3"
-content-hash = "054f990b61b581d63911b60dcb657d2cb1817c1837473dd4ebdf101ff7c5e3f8"
+content-hash = "87cbe39df0f2bdffdab07c1cbc10f7f5fbee1936f16e45fc491f58676d296ee5"
 
 [metadata.files]
 asttokens = [
@@ -1265,8 +1265,8 @@ fonttools = [
     {file = "fonttools-4.38.0.zip", hash = "sha256:2bb244009f9bf3fa100fc3ead6aeb99febe5985fa20afbfbaa2f8946c2fbdaf1"},
 ]
 gen-trace = [
-    {file = "gen-trace-0.1.0a2.tar.gz", hash = "sha256:2f7d3e8a191859aebb36cc68642e2ee9e78a2f4482af2f92e03d5340d6f63f0d"},
-    {file = "gen_trace-0.1.0a2-py3-none-any.whl", hash = "sha256:a47d3d2a4ef98b197ac1ee639f0577dfa17f9d08d30417efbbe86aefcd2a42da"},
+    {file = "gen-trace-0.1.0.tar.gz", hash = "sha256:4ea845cc677c06b0c5147d8a0c023f3795f4927cb83881f4fa8c2a99ea6fe9cd"},
+    {file = "gen_trace-0.1.0-py3-none-any.whl", hash = "sha256:cd982f38d76fe9da8ca7273a73d87bf060bc4449ed641f77a7ae5894efe1dbf9"},
 ]
 holoviews = [
     {file = "holoviews-1.15.2-py2.py3-none-any.whl", hash = "sha256:c73a1beb424551619ebe1d6e504a6743022db2465b778823e924555e426387e1"},

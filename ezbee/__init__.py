@@ -1,5 +1,5 @@
 """Init."""
-__version__ = "0.1.4"
+__version__ = "0.1.5"
 from .ezbee import ezbee
 from .loglevel import loglevel
 
