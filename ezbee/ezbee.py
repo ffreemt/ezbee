@@ -2,7 +2,8 @@
 # pylint: disable=invalid-name
 from typing import List
 
-from cmat2aset import cmat2aset  # pylint: disable=import-error
+# from cmat2aset import cmat2aset  # pylint: disable=import-error
+from gen_trace.cmat2aset import cmat2aset  # pylint: disable=import-error
 from fast_scores.gen_cmat import gen_cmat  # pylint: disable=import-error
 from logzero import logger
 
